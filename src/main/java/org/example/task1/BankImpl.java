@@ -76,7 +76,15 @@ public class BankImpl implements Bank {
 
     @Override
     public void withdraw(Long id, BigDecimal amount) {
-        //TODO: implement withdraw operation 
+        for (Account account:accounts) {
+            if (account.getId().equals(id)) {
+                BigDecimal currentBalance = account.getBalance();
+                if(currentBalance.compareTo(amount) >0){
+                    account.setBalance(currentBalance.subtract(amount));
+
+                }
+            }
+        }
     }
 
     @Override

@@ -8,10 +8,7 @@ package org.example.task1;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
-/**
- *
- * @author m
- */
+
 public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
