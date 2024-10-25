@@ -89,7 +89,19 @@ public class BankImpl implements Bank {
 
     @Override
     public void transfer(Long idSource, Long idDestination, BigDecimal amount) {
-        //TODO: implement transfer operation
+        for (Account account:accounts) {
+            if (account.getId().equals(idSource) ) {
+                BigDecimal currentBalance = account.getBalance();
+                if(currentBalance.compareTo(amount) >0){
+                    account.setBalance(currentBalance.subtract(amount));
+                }
+                if(account.getId().equals(idDestination)){
+                    account.setBalance(account.getBalance().add(amount));
+                }
+
+
+            }
+        }
     }
     
 }
