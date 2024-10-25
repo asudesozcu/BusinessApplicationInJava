@@ -7,7 +7,7 @@ package org.example.task1;
 
 import java.math.BigDecimal;
 
-interface Bank {
+public interface Bank {
 
     /**
      * Creates new account and returns its id or returns id of existing account
