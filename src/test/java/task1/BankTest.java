@@ -30,44 +30,40 @@ public class BankTest {
 
     @Test
     public void testCreateAccount() {
-        Long id = bank.createAccount("joe", "usa");
+        Long id = bank.createAccount("asude", "pol");
         assert id!=null;
-        Long id2 = bank.createAccount("joe", "usa");
+        Long id2 = bank.createAccount("asude", "pol");
         assert id.equals(id2);
 
     }
 
     @Test
     public void testFindAccount1() {
-        Long id = bank.createAccount("joe", "usa");
+        Long id = bank.createAccount("asude", "pol");
         assert id!=null;
-        Long id2 = bank.findAccount("joe", "usa");
+        Long id2 = bank.findAccount("asude", "pol");
         assert id.equals(id2);
 
     }
 
     @Test
     public void testFindAccount2() {
-        Long id2 = bank.findAccount("joe", "usa");
+        Long id2 = bank.findAccount("asude", "pol");
         assert id2 == null;
     }
 
     @Test
     public void testGetBalance1() {
-        // Verifies if new account has initial balance of zero
-        Long id = bank.createAccount("joe", "usa");
+        Long id = bank.createAccount("asude", "pol");
         assert bank.getBalance(id).equals(new BigDecimal(0));
     }
 
     @Test
     public void testGetBalance2() {
-        // Verifies if an exeption of a selected type (first argument) is thrown from code in lambda expression (second argument)
         Assertions.assertThrows(
-                // The type of expected exception
                 Bank.AccountIdException.class,
                 () -> {
-                    // Code that should throw an exception. Here we expect that getBalance throws
-                    // AccountIdException because there is no Account with id 1L, 'L' is used to convert int constant to long
+
                     BigDecimal balance  = bank.getBalance(1L);
                 }
         );
@@ -75,60 +71,79 @@ public class BankTest {
 
     @Test
     public void testDeposit() {
-        Long id = bank.createAccount("joe", "usa");
+        Long id = bank.createAccount("asude", "pol");
         bank.deposit(id, new BigDecimal(100));
         assert bank.getBalance(id).equals(BigDecimal.valueOf(100));
         bank.deposit(id, new BigDecimal("100.20"));
         assert bank.getBalance(id).equals(new BigDecimal("200.20"));
     }
 
-    //@Test // - remove comment to execute test method
+    @Test
     public void testDeposit2() {
-        // TODO: verify if deposit throws AccountIdException when id of non-existing account is passed as argument
-        // By default, when no assersion is present the test is assumed to be succes. You should remove this line when you implement test.
-        assert false;
+        Assertions.assertThrows(Bank.AccountIdException.class, () -> {
+            bank.deposit(15L, new BigDecimal(10));
+        });
     }
 
-    //@Test // - remove comment to execute test method
-    public void testWidthraw1() {
-        // TODO: verify if widtraw correctly reduces balance of selected account
-        // By default, when no assersion is present the test is assumed to be succes. You should remove this line when you implement test.
-        assert false;
+
+    @Test
+    public void testWithdraw1() {
+        Long id = bank.createAccount("asude", "pol");
+        bank.deposit(id, new BigDecimal(200));
+        bank.withdraw(id, new BigDecimal(50));
+        assert bank.getBalance(id).equals(new BigDecimal(150));
     }
 
-    //@Test // - remove comment to execute test method
-    public void testWidthraw2() {
-        // TODO: verify if widthraw throws AccountIdException when id of non-existing account is passed as argument
-        // By default, when no assersion is present the test is assumed to be succes. You should remove this line when you implement test.
-        assert false;
+    @Test
+    public void testWithdraw2() {
+        Assertions.assertThrows(Bank.AccountIdException.class, () -> {
+            bank.withdraw(999L, new BigDecimal(50));
+        });
     }
 
-    //@Test // - remove comment to execute test method
-    public void testWidthraw3() {
-        // TODO: verify if widthraw throws InsufficientFundsException if source account do not have sufficient balance (balance is less that requested amount)
-        // By default, when no assersion is present the test is assumed to be succes. You should remove this line when you implement test.
-        assert false;
+
+    @Test
+    public void testWithdraw3() {
+        Long id = bank.createAccount("asude", "pol");
+        bank.deposit(id, new BigDecimal(50));
+        Assertions.assertThrows(Bank.InsufficientFundsException.class, () -> {
+            bank.withdraw(id, new BigDecimal(100));
+        });
     }
 
-    //@Test // - remove comment to execute test method
+
+    @Test
     public void testTransfer1() {
-        // TODO: verify if transfer correctly transfers money between accounts (source account balance shoud be decreased, destination balance increased)
-        // By default, when no assersion is present the test is assumed to be succes. You should remove this line when you implement test.
-        assert false;
+        Long sourceId = bank.createAccount("asude", "pol");
+        Long destId = bank.createAccount("jane", "pol");
+        bank.deposit(sourceId, new BigDecimal(200));
+        bank.transfer(sourceId, destId, new BigDecimal(50));
+        assert bank.getBalance(sourceId).equals(new BigDecimal(150));
+        assert bank.getBalance(destId).equals(new BigDecimal(50));
     }
 
-    //@Test // - remove comment to execute test method
+
+    @Test
     public void testTransfer2() {
-        // TODO: verify if transfer throws AccountIdException when id of non-existing account is passed as argument
-        // By default, when no assersion is present the test is assumed to be succes. You should remove this line when you implement test.
-        assert false;
+        Long sourceId = bank.createAccount("asude", "pol");
+        Assertions.assertThrows(Bank.AccountIdException.class, () -> {
+            bank.transfer(sourceId, 999L, new BigDecimal(50));
+        });
+        Assertions.assertThrows(Bank.AccountIdException.class, () -> {
+            bank.transfer(999L, sourceId, new BigDecimal(50));
+        });
     }
 
-    //@Test // - remove comment to execute test method
+
+    @Test
     public void testTransfer3() {
-        // TODO: verify if transfer throws InsufficientFundsException if source account do not have sufficient balance (balance is less that transfer amount)
-        // By default, when no assersion is present the test is assumed to be succes. You should remove this line when you implement test.
-        assert false;
+        Long sourceId = bank.createAccount("asude", "pol");
+        Long destId = bank.createAccount("jane", "pol");
+        bank.deposit(sourceId, new BigDecimal(50));
+        Assertions.assertThrows(Bank.InsufficientFundsException.class, () -> {
+            bank.transfer(sourceId, destId, new BigDecimal(100));
+        });
     }
+
 
 }
