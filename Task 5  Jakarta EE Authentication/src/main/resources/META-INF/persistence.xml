@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+        version="3.0">
+  <persistence-unit name="PU" transaction-type="JTA">
+    
+
+  <!-- Match this with the JNDI Name from the Payara configuration -->
+    <jta-data-source>JsfCrudDemoDataSource2</jta-data-source>
+
+    <!-- Entity classes -->
+    <class>wipb.jsfcruddemo.web.model.User</class>
+    <class>wipb.jsfcruddemo.web.model.Client</class>
+    <class>wipb.jsfcruddemo.web.model.Account</class>
+    <class>wipb.jsfcruddemo.web.model.AbstractModel</class>
+
+    <!-- Persistence properties -->
+    <properties>
+      <!-- Automatically generate the database schema -->
+      <property name="jakarta.persistence.schema-generation.database.action" value="create" />
+      <property name="eclipselink.logging.level" value="FINE" />
+      <property name="eclipselink.logging.level.sql" value="FINE" />
+    </properties>
+  </persistence-unit>
+</persistence>
