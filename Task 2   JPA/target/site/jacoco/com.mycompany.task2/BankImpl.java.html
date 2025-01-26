@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="tr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BankImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">task2</a> &gt; <a href="index.source.html" class="el_package">com.mycompany.task2</a> &gt; <span class="el_source">BankImpl.java</span></div><h1>BankImpl.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.task2;
+
+import com.mycompany.task2.model.Account;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+import com.mycompany.task2.repository.AccountRepository;
+
+public class BankImpl implements Bank {
+
+    private AccountRepository accountRepository;
+
+<span class="fc" id="L19">    public BankImpl(AccountRepository accountRepository) {</span>
+<span class="fc" id="L20">        this.accountRepository = accountRepository;</span>
+<span class="fc" id="L21">    }</span>
+
+    @Override
+    public Long createAccount(String name, String address) {
+<span class="fc" id="L25">        Account a = accountRepository.findByNameAndAddress(name, address);</span>
+<span class="pc bpc" id="L26" title="1 of 2 branches missed.">        if (a == null) {</span>
+<span class="fc" id="L27">            a = new Account(name, address, BigDecimal.ZERO);</span>
+<span class="fc" id="L28">            accountRepository.save(a);</span>
+        }
+<span class="fc" id="L30">        return a.getId();</span>
+    }
+
+    @Override
+    public Long findAccount(String name, String address) {
+<span class="fc" id="L35">        Account account = accountRepository.findByNameAndAddress(name, address);</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">        if (account != null) {</span>
+<span class="fc" id="L37">            return account.getId();</span>
+        }
+<span class="fc" id="L39">        return null;</span>
+
+    }
+
+    @Override
+    public void deposit(Long id, BigDecimal amount) {
+<span class="fc" id="L45">        Account a = accountRepository.findById(id);</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        if (a == null) {</span>
+<span class="fc" id="L47">            throw new AccountIdException();</span>
+        }
+<span class="fc" id="L49">        a.setBalance(a.getBalance().add(amount));</span>
+<span class="fc" id="L50">        accountRepository.save(a);</span>
+<span class="fc" id="L51">    }</span>
+
+    @Override
+    public BigDecimal getBalance(Long id) {
+
+<span class="fc" id="L56">        Account a = accountRepository.findById(id);</span>
+<span class="fc" id="L57">        return a.getBalance();</span>
+    }
+
+    @Override
+    public void withdraw(Long id, BigDecimal amount) {
+<span class="fc" id="L62">        Account a = accountRepository.findById(id);</span>
+<span class="pc bpc" id="L63" title="2 of 4 branches missed.">        if (a != null &amp;&amp; a.getBalance().compareTo(amount) &lt; 0) {</span>
+<span class="nc" id="L64">            throw new AccountIdException();</span>
+        }
+<span class="fc" id="L66">        a.setBalance(a.getBalance().subtract(amount));</span>
+<span class="fc" id="L67">        accountRepository.save(a);</span>
+<span class="fc" id="L68">    }</span>
+
+    @Override
+    public void transfer(Long idSource, Long idDestination, BigDecimal amount) {
+<span class="fc" id="L72">        Account a1 = accountRepository.findById(idSource);</span>
+<span class="fc" id="L73">        Account a2 = accountRepository.findById(idDestination);</span>
+<span class="pc bpc" id="L74" title="2 of 4 branches missed.">        if (a1 != null &amp;&amp; a2 != null) {</span>
+<span class="pc bpc" id="L75" title="1 of 2 branches missed.">            if (a1.getBalance().compareTo(amount) &gt; 0) {</span>
+<span class="fc" id="L76">                a1.setBalance( a1.getBalance().subtract(amount));</span>
+<span class="fc" id="L77">                a2.setBalance(a2.getBalance().add(amount));</span>
+            }
+
+
+        }
+<span class="fc" id="L82">        accountRepository.save(a1);</span>
+<span class="fc" id="L83">        accountRepository.save(a2);</span>
+<span class="fc" id="L84">    }</span>
+
+    @Override
+    public List&lt;Account&gt; getAccounts() {
+<span class="nc" id="L88">        return accountRepository.findAll();</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

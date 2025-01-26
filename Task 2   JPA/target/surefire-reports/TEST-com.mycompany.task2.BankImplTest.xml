@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.mycompany.task2.BankImplTest" time="2.43" tests="9" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="19"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="C:\Users\sozcu\Desktop\task2\target\test-classes;C:\Users\sozcu\Desktop\task2\target\classes;C:\Users\sozcu\.m2\repository\org\junit\jupiter\junit-jupiter\5.11.3\junit-jupiter-5.11.3.jar;C:\Users\sozcu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.3\junit-jupiter-api-5.11.3.jar;C:\Users\sozcu\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\sozcu\.m2\repository\org\junit\platform\junit-platform-commons\1.11.3\junit-platform-commons-1.11.3.jar;C:\Users\sozcu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\sozcu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.11.3\junit-jupiter-params-5.11.3.jar;C:\Users\sozcu\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.11.3\junit-jupiter-engine-5.11.3.jar;C:\Users\sozcu\.m2\repository\org\junit\platform\junit-platform-engine\1.11.3\junit-platform-engine-1.11.3.jar;C:\Users\sozcu\.m2\repository\com\h2database\h2\2.3.232\h2-2.3.232.jar;C:\Users\sozcu\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.jpa\4.0.4\org.eclipse.persistence.jpa-4.0.4.jar;C:\Users\sozcu\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.asm\9.7.0\org.eclipse.persistence.asm-9.7.0.jar;C:\Users\sozcu\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.core\4.0.4\org.eclipse.persistence.core-4.0.4.jar;C:\Users\sozcu\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.jpa.jpql\4.0.4\org.eclipse.persistence.jpa.jpql-4.0.4.jar;C:\Users\sozcu\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Warsaw"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="19"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="TR"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-19\bin"/>
+    <property name="sun.java.command" value="C:\Users\sozcu\AppData\Local\Temp\surefire11831973688101737990\surefirebooter-20241109141905076_3.jar C:\Users\sozcu\AppData\Local\Temp\surefire11831973688101737990 2024-11-09T14-19-04_904-jvmRun1 surefire-20241109141905076_1tmp surefire_0-20241109141905076_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\sozcu\Desktop\task2\target\test-classes;C:\Users\sozcu\Desktop\task2\target\classes;C:\Users\sozcu\.m2\repository\org\junit\jupiter\junit-jupiter\5.11.3\junit-jupiter-5.11.3.jar;C:\Users\sozcu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.3\junit-jupiter-api-5.11.3.jar;C:\Users\sozcu\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\sozcu\.m2\repository\org\junit\platform\junit-platform-commons\1.11.3\junit-platform-commons-1.11.3.jar;C:\Users\sozcu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\sozcu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.11.3\junit-jupiter-params-5.11.3.jar;C:\Users\sozcu\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.11.3\junit-jupiter-engine-5.11.3.jar;C:\Users\sozcu\.m2\repository\org\junit\platform\junit-platform-engine\1.11.3\junit-platform-engine-1.11.3.jar;C:\Users\sozcu\.m2\repository\com\h2database\h2\2.3.232\h2-2.3.232.jar;C:\Users\sozcu\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.jpa\4.0.4\org.eclipse.persistence.jpa-4.0.4.jar;C:\Users\sozcu\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.asm\9.7.0\org.eclipse.persistence.asm-9.7.0.jar;C:\Users\sozcu\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.core\4.0.4\org.eclipse.persistence.core-4.0.4.jar;C:\Users\sozcu\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.jpa.jpql\4.0.4\org.eclipse.persistence.jpa.jpql-4.0.4.jar;C:\Users\sozcu\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\sozcu"/>
+    <property name="user.language" value="tr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-09-20"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-19"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\sozcu\Desktop\task2"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\sozcu\AppData\Local\Temp\surefire11831973688101737990\surefirebooter-20241109141905076_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="19+36-2238"/>
+    <property name="user.name" value="sozcu"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\sozcu\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\sozcu\AppData\Local\Temp\"/>
+    <property name="java.version" value="19"/>
+    <property name="user.dir" value="C:\Users\sozcu\Desktop\task2"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-19\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\app\sozcu\product\21c\dbhomeXE\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\mingw64\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\sozcu\AppData\Local\Programs\Python\Launcher\;C:\Users\sozcu\AppData\Local\Microsoft\WindowsApps;C:\Users\sozcu\AppData\Local\GitHubDesktop\bin;C:\src\flutter\bin;C:\Users\sozcu\AppData\Local\Programs\Microsoft VS Code\bin;C:\mingw64\bin;C:\Users\sozcu\Downloads\apache-maven-3.9.8-bin\apache-maven-3.9.8\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2024.2.0.2\bin;;C:\Users\sozcu\AppData\Local\Microsoft\WinGet\Packages\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\sozcu\.dotnet\tools;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="19+36-2238"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="63.0"/>
+  </properties>
+  <testcase name="testFindAccount1" classname="com.mycompany.task2.BankImplTest" time="2.283">
+    <system-out><![CDATA[[EL Fine]: server: 2024-11-09 14:19:06.818--Thread(Thread[#1,main,5,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
+[EL Config]: metadata: 2024-11-09 14:19:07.174--ServerSession(1283290160)--Thread(Thread[#1,main,5,main])--The access type for the persistent class [class com.mycompany.task2.model.Account] is set to [FIELD].
+[EL Config]: metadata: 2024-11-09 14:19:07.219--ServerSession(1283290160)--Thread(Thread[#1,main,5,main])--The alias name for the entity class [class com.mycompany.task2.model.Account] is being defaulted to: Account.
+[EL Config]: metadata: 2024-11-09 14:19:07.223--ServerSession(1283290160)--Thread(Thread[#1,main,5,main])--The table name for entity [class com.mycompany.task2.model.Account] is being defaulted to: ACCOUNT.
+[EL Config]: metadata: 2024-11-09 14:19:07.238--ServerSession(1283290160)--Thread(Thread[#1,main,5,main])--The column name for element [address] is being defaulted to: ADDRESS.
+[EL Config]: metadata: 2024-11-09 14:19:07.243--ServerSession(1283290160)--Thread(Thread[#1,main,5,main])--The column name for element [balance] is being defaulted to: BALANCE.
+[EL Config]: metadata: 2024-11-09 14:19:07.243--ServerSession(1283290160)--Thread(Thread[#1,main,5,main])--The column name for element [name] is being defaulted to: NAME.
+[EL Config]: metadata: 2024-11-09 14:19:07.244--ServerSession(1283290160)--Thread(Thread[#1,main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Info]: 2024-11-09 14:19:07.378--ServerSession(1283290160)--Thread(Thread[#1,main,5,main])--EclipseLink, version: Eclipse Persistence Services - 4.0.4.v202407190748-059428cdd2583c46f1f3e50d235854840a6fa9a7
+[EL Fine]: connection: 2024-11-09 14:19:07.93--Thread(Thread[#1,main,5,main])--Detected database platform: org.eclipse.persistence.platform.database.H2Platform
+[EL Fine]: connection: 2024-11-09 14:19:07.945--ServerSession(1283290160)--Connection(205300866)--Thread(Thread[#1,main,5,main])--connecting(DatabaseLogin(
+	platform=>H2Platform
+	user name=> "sa"
+	datasource URL=> "jdbc:h2:mem:;DB_CLOSE_DELAY=-1"
+))
+[EL Config]: connection: 2024-11-09 14:19:07.95--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--Connected: jdbc:h2:mem:
+	User: SA
+	Database: H2  Version: 2.3.232 (2024-08-11)
+	Driver: H2 JDBC Driver  Version: 2.3.232 (2024-08-11)
+[EL Fine]: connection: 2024-11-09 14:19:08.061--ServerSession(1283290160)--Thread(Thread[#1,main,5,main])--/file:/C:/Users/sozcu/Desktop/task2/target/test-classes/_PU login successful
+[EL Fine]: 2024-11-09 14:19:08.112--Thread(Thread[#1,main,5,main])--JsonPlatformProvider class org.eclipse.persistence.pgsql.PostgreSQLJsonPlatformProvider was not found
+[EL Fine]: 2024-11-09 14:19:08.113--Thread(Thread[#1,main,5,main])--JsonPlatformProvider class org.eclipse.persistence.platform.database.oracle.json.OracleJsonPlatformProvider was not found
+[EL Fine]: 2024-11-09 14:19:08.114--Thread(Thread[#1,main,5,main])--JsonPlatformProvider class org.eclipse.persistence.json.DefaultJsonPlatformProvider was not found
+[EL Fine]: sql: 2024-11-09 14:19:08.157--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--CREATE TABLE ACCOUNT (ID BIGINT NOT NULL, ADDRESS VARCHAR, BALANCE NUMERIC(38), NAME VARCHAR, PRIMARY KEY (ID))
+[EL Fine]: sql: 2024-11-09 14:19:08.176--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--CREATE SEQUENCE SEQ_GEN_SEQUENCE INCREMENT BY 50 START WITH 50
+[EL Fine]: sql: 2024-11-09 14:19:08.519--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT WHERE ((NAME = 'asude') AND ('pol' = 'pol'))
+[EL Fine]: sql: 2024-11-09 14:19:08.539--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--CALL NEXT VALUE FOR SEQ_GEN_SEQUENCE
+[EL Fine]: sql: 2024-11-09 14:19:08.557--ClientSession(380397539)--Connection(661943548)--Thread(Thread[#1,main,5,main])--INSERT INTO ACCOUNT (ID, ADDRESS, BALANCE, NAME) VALUES (?, ?, ?, ?)
+	bind => [1, pol, 0, asude]
+[EL Fine]: sql: 2024-11-09 14:19:08.574--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT WHERE ((NAME = 'asude') AND ('pol' = 'pol'))
+[EL Fine]: sql: 2024-11-09 14:19:08.582--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT
+[EL Fine]: sql: 2024-11-09 14:19:08.586--ClientSession(358414838)--Connection(661943548)--Thread(Thread[#1,main,5,main])--DELETE FROM ACCOUNT WHERE (ID = ?)
+	bind => [1]
+]]></system-out>
+  </testcase>
+  <testcase name="testFindAccount2" classname="com.mycompany.task2.BankImplTest" time="0.004">
+    <system-out><![CDATA[[EL Fine]: sql: 2024-11-09 14:19:08.603--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT WHERE ((NAME = 'asude') AND ('pol' = 'pol'))
+[EL Fine]: sql: 2024-11-09 14:19:08.604--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT
+]]></system-out>
+  </testcase>
+  <testcase name="testGetBalance1" classname="com.mycompany.task2.BankImplTest" time="0.01">
+    <system-out><![CDATA[[EL Fine]: sql: 2024-11-09 14:19:08.608--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT WHERE ((NAME = 'asude') AND ('pol' = 'pol'))
+[EL Fine]: sql: 2024-11-09 14:19:08.609--ClientSession(483657770)--Connection(661943548)--Thread(Thread[#1,main,5,main])--INSERT INTO ACCOUNT (ID, ADDRESS, BALANCE, NAME) VALUES (?, ?, ?, ?)
+	bind => [2, pol, 0, asude]
+[EL Fine]: sql: 2024-11-09 14:19:08.613--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT
+[EL Fine]: sql: 2024-11-09 14:19:08.615--ClientSession(575233839)--Connection(661943548)--Thread(Thread[#1,main,5,main])--DELETE FROM ACCOUNT WHERE (ID = ?)
+	bind => [2]
+]]></system-out>
+  </testcase>
+  <testcase name="depositTest1" classname="com.mycompany.task2.BankImplTest" time="0.012">
+    <system-out><![CDATA[[EL Fine]: sql: 2024-11-09 14:19:08.626--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT WHERE (ID = ?)
+	bind => [1]
+[EL Fine]: sql: 2024-11-09 14:19:08.628--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT
+]]></system-out>
+  </testcase>
+  <testcase name="testDeposit" classname="com.mycompany.task2.BankImplTest" time="0.02">
+    <system-out><![CDATA[[EL Fine]: sql: 2024-11-09 14:19:08.632--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT WHERE ((NAME = 'asude') AND ('pol' = 'pol'))
+[EL Fine]: sql: 2024-11-09 14:19:08.633--ClientSession(1365704314)--Connection(661943548)--Thread(Thread[#1,main,5,main])--INSERT INTO ACCOUNT (ID, ADDRESS, BALANCE, NAME) VALUES (?, ?, ?, ?)
+	bind => [3, pol, 0, asude]
+[EL Fine]: sql: 2024-11-09 14:19:08.636--ClientSession(970337863)--Connection(661943548)--Thread(Thread[#1,main,5,main])--UPDATE ACCOUNT SET BALANCE = ? WHERE (ID = ?)
+	bind => [100, 3]
+[EL Fine]: sql: 2024-11-09 14:19:08.644--ClientSession(1753365355)--Connection(661943548)--Thread(Thread[#1,main,5,main])--UPDATE ACCOUNT SET BALANCE = ? WHERE (ID = ?)
+	bind => [200.20, 3]
+[EL Fine]: sql: 2024-11-09 14:19:08.646--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT
+[EL Fine]: sql: 2024-11-09 14:19:08.648--ClientSession(1248236698)--Connection(661943548)--Thread(Thread[#1,main,5,main])--DELETE FROM ACCOUNT WHERE (ID = ?)
+	bind => [3]
+]]></system-out>
+  </testcase>
+  <testcase name="testWithdraw1" classname="com.mycompany.task2.BankImplTest" time="0.014">
+    <system-out><![CDATA[[EL Fine]: sql: 2024-11-09 14:19:08.652--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT WHERE ((NAME = 'asude') AND ('pol' = 'pol'))
+[EL Fine]: sql: 2024-11-09 14:19:08.654--ClientSession(796028148)--Connection(661943548)--Thread(Thread[#1,main,5,main])--INSERT INTO ACCOUNT (ID, ADDRESS, BALANCE, NAME) VALUES (?, ?, ?, ?)
+	bind => [4, pol, 0, asude]
+[EL Fine]: sql: 2024-11-09 14:19:08.656--ClientSession(221029289)--Connection(661943548)--Thread(Thread[#1,main,5,main])--UPDATE ACCOUNT SET BALANCE = ? WHERE (ID = ?)
+	bind => [200, 4]
+[EL Fine]: sql: 2024-11-09 14:19:08.659--ClientSession(1892075175)--Connection(661943548)--Thread(Thread[#1,main,5,main])--UPDATE ACCOUNT SET BALANCE = ? WHERE (ID = ?)
+	bind => [150, 4]
+[EL Fine]: sql: 2024-11-09 14:19:08.661--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT
+[EL Fine]: sql: 2024-11-09 14:19:08.663--ClientSession(1000179138)--Connection(661943548)--Thread(Thread[#1,main,5,main])--DELETE FROM ACCOUNT WHERE (ID = ?)
+	bind => [4]
+]]></system-out>
+  </testcase>
+  <testcase name="createAccountTest" classname="com.mycompany.task2.BankImplTest" time="0.016">
+    <system-out><![CDATA[[EL Fine]: sql: 2024-11-09 14:19:08.667--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT WHERE ((NAME = 'name1') AND ('address1' = 'address1'))
+[EL Fine]: sql: 2024-11-09 14:19:08.668--ClientSession(199582547)--Connection(661943548)--Thread(Thread[#1,main,5,main])--INSERT INTO ACCOUNT (ID, ADDRESS, BALANCE, NAME) VALUES (?, ?, ?, ?)
+	bind => [5, address1, 0, name1]
+[EL Fine]: sql: 2024-11-09 14:19:08.671--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT WHERE ((NAME = 'name2') AND ('address2' = 'address2'))
+[EL Fine]: sql: 2024-11-09 14:19:08.672--ClientSession(1825389809)--Connection(661943548)--Thread(Thread[#1,main,5,main])--INSERT INTO ACCOUNT (ID, ADDRESS, BALANCE, NAME) VALUES (?, ?, ?, ?)
+	bind => [6, address2, 0, name2]
+[EL Fine]: sql: 2024-11-09 14:19:08.673--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT
+[EL Fine]: sql: 2024-11-09 14:19:08.676--ClientSession(598529374)--Connection(661943548)--Thread(Thread[#1,main,5,main])--DELETE FROM ACCOUNT WHERE (ID = ?)
+	bind => [5]
+[EL Fine]: sql: 2024-11-09 14:19:08.679--ClientSession(507972177)--Connection(661943548)--Thread(Thread[#1,main,5,main])--DELETE FROM ACCOUNT WHERE (ID = ?)
+	bind => [6]
+]]></system-out>
+  </testcase>
+  <testcase name="testDeposit2" classname="com.mycompany.task2.BankImplTest" time="0.004">
+    <system-out><![CDATA[[EL Fine]: sql: 2024-11-09 14:19:08.683--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT WHERE (ID = ?)
+	bind => [15]
+[EL Fine]: sql: 2024-11-09 14:19:08.685--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT
+]]></system-out>
+  </testcase>
+  <testcase name="testTransfer1" classname="com.mycompany.task2.BankImplTest" time="0.017">
+    <system-out><![CDATA[[EL Fine]: sql: 2024-11-09 14:19:08.688--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT WHERE ((NAME = 'asude') AND ('pol' = 'pol'))
+[EL Fine]: sql: 2024-11-09 14:19:08.689--ClientSession(120042416)--Connection(661943548)--Thread(Thread[#1,main,5,main])--INSERT INTO ACCOUNT (ID, ADDRESS, BALANCE, NAME) VALUES (?, ?, ?, ?)
+	bind => [7, pol, 0, asude]
+[EL Fine]: sql: 2024-11-09 14:19:08.69--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT WHERE ((NAME = 'jane') AND ('pol' = 'pol'))
+[EL Fine]: sql: 2024-11-09 14:19:08.693--ClientSession(2022734406)--Connection(661943548)--Thread(Thread[#1,main,5,main])--INSERT INTO ACCOUNT (ID, ADDRESS, BALANCE, NAME) VALUES (?, ?, ?, ?)
+	bind => [8, pol, 0, jane]
+[EL Fine]: sql: 2024-11-09 14:19:08.696--ClientSession(1898442827)--Connection(661943548)--Thread(Thread[#1,main,5,main])--UPDATE ACCOUNT SET BALANCE = ? WHERE (ID = ?)
+	bind => [200, 7]
+[EL Fine]: sql: 2024-11-09 14:19:08.698--ClientSession(119777796)--Connection(661943548)--Thread(Thread[#1,main,5,main])--UPDATE ACCOUNT SET BALANCE = ? WHERE (ID = ?)
+	bind => [150, 7]
+[EL Fine]: sql: 2024-11-09 14:19:08.699--ClientSession(706753323)--Connection(661943548)--Thread(Thread[#1,main,5,main])--UPDATE ACCOUNT SET BALANCE = ? WHERE (ID = ?)
+	bind => [50, 8]
+[EL Fine]: sql: 2024-11-09 14:19:08.701--ServerSession(1283290160)--Connection(661943548)--Thread(Thread[#1,main,5,main])--SELECT ID, ADDRESS, BALANCE, NAME FROM ACCOUNT
+[EL Fine]: sql: 2024-11-09 14:19:08.702--ClientSession(400265383)--Connection(661943548)--Thread(Thread[#1,main,5,main])--DELETE FROM ACCOUNT WHERE (ID = ?)
+	bind => [7]
+[EL Fine]: sql: 2024-11-09 14:19:08.703--ClientSession(1747961620)--Connection(661943548)--Thread(Thread[#1,main,5,main])--DELETE FROM ACCOUNT WHERE (ID = ?)
+	bind => [8]
+]]></system-out>
+  </testcase>
+</testsuite>

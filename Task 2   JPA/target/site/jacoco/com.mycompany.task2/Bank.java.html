@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="tr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Bank.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">task2</a> &gt; <a href="index.source.html" class="el_package">com.mycompany.task2</a> &gt; <span class="el_source">Bank.java</span></div><h1>Bank.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.task2;
+
+import com.mycompany.task2.model.Account;
+import java.math.BigDecimal;
+import java.util.List;
+
+interface Bank {
+    /**
+     * Creates new account and returns its id or returns id of existing account
+     *
+     * @param name holder's name
+     * @param address holder's address
+     * @return id of newly created or existing account.
+     */
+    Long createAccount(String name, String address);
+
+    /**
+     * Finds id of an account.
+     *
+     * @param name holder's name
+     * @param address holder's address
+     * @return account id or null if there is no account with given parameters
+     */
+    Long findAccount(String name, String address);
+
+    /**
+     * Depsits given amount of money to account
+     *
+     * @param id
+     * @param amount
+     * @throws AccountIdException, if id is not valid (there is no acccount with
+     * given id)
+     */
+    void deposit(Long id, BigDecimal amount);
+
+    /**
+     * Returns the balance of the account.
+     *
+     * @param id
+     * @return balance
+     * @throws AccountIdException, if id is not valid (there is no acccount with
+     * given id)
+     */
+    BigDecimal getBalance(Long id);
+
+    /**
+     * Withdraws money from account.
+     *
+     * @param id
+     * @param amount
+     * @throws AccountIdException, if id is not valid (there is no acccount with
+     * given id)
+     * @throws InsufficientFundsException, when there is no sufficient funds to
+     * perform required operation.
+     */
+    void withdraw(Long id, BigDecimal amount);
+
+    /**
+     * Transfers money between accounts.
+     *
+     * @param idSource
+     * @param idDestination
+     * @param amount
+     * @throws AccountIdException, if id is not valid (there is no acccount with
+     * given id)
+     * @throws InsufficientFundsException, when there is no sufficient funds to
+     * perform required operation
+     */
+    void transfer(Long idSource, Long idDestination, BigDecimal amount);
+    
+    List&lt;Account&gt; getAccounts();
+
+<span class="nc" id="L78">    class InsufficientFundsException extends RuntimeException {</span>
+    };
+
+<span class="fc" id="L81">    class AccountIdException extends RuntimeException {</span>
+    };
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
